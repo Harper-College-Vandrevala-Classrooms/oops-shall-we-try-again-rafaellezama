@@ -2,22 +2,23 @@
 using namespace std;
 
 void print_error_message_to_console();
-void prompt_and_read(int);
-void input_is_valid(int);
+int prompt_and_read(int);
+
 
 int main(){
-  prompt_and_read();
+  prompt_and_read(input);
+  int input = prompt_and_read();
+  cout << input;
   return 0;
 }
 
 void print_error_message_to_console(){
   cout << "Your value is invalid" <<endl;
 }
-
-void prompt_and_read(){
-  int value;
-  cout << "Enter a value: ";
+int prompt_and_read(){
+  cout << "Please enter a value: ";
   cin >> value;
-
+  cout << "The value chosen by the user is " << value;
+  cout <<endl;  
   return value;
 }
